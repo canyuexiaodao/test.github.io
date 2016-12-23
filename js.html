@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<style type="text/css">     
+		</style>     
+		<script type="text/javascript">       
+//			var binarySearch = function(array, start, stop, num) {         
+//			if(stop - start == 1) {           
+//			if(array[start] == num) {             
+//			return start;           
+//			}           
+//			if(array[stop] == num) {             
+//			return stop;           
+//			}           
+//			return -1;         
+//			}           
+//			var center = Math.floor((start + stop)/2);         
+//			if(num != array[center]) {           
+//			return num > array[center] ? binarySearch(array, center, stop, num)              
+//			: binarySearch(array, start, center, num);         
+//			}         
+//			return center;       
+//			}       
+//			var array = [1,4,6,12,15,20];       
+//			document.writeln(binarySearch(array, 0, array.length, 2));    
+			var array = [];  
+			var key = 482;  
+			var number = 1000;  
+			
+			for(i=0;i<number;i++){  
+			 array.push(i);  
+			}  
+			//-->>  
+			var time = new Date();  
+			var a;  
+			var left = 0;  
+			var right= array.length;  
+			while(left<=right){  
+			 var center=Math.floor((left+right)/2);  
+			 if(array[center] == key) a = center;  
+			 if(key < array[center]){  
+			  right = center - 1;   
+			 }else{  
+			  left = center + 1;  
+			 }  
+			}  
+			alert("二分查找法搜索的结果:"+a);  
+			alert((new Date() - time)/1000); 
+
+
+
+		</script> 
+		
+		
+		
+		
+		<!--<script>
+			var arr=[2,5,35,40,70,85,900]  
+  
+function binarySearch(findVal,arr,leftIndex,rightIndex)  
+{  
+    //提示找不到  
+    if(leftIndex>rightIndex)  
+    {  
+        document.write("找不到");  
+        return ;  
+    }  
+    //找到中间值  
+    var midIndex=Math.floor((leftIndex+rightIndex)/2)//js除法若产生小数，则需使用floor函数使小数向下取舍  
+    var midVal=arr[midIndex];  
+    //比较  
+    if(midVal>findVal)  //在左边  
+    {  
+        binarySearch(findVal,arr,leftIndex,midIndex-1);  
+    }  
+    else if(midVal<findVal)//在右边  
+    {  
+        binarySearch(findVal,arr,midIndex+1,rightIndex);  
+    }  
+    else  
+    {  
+        document.write("结果已找到，下标为："+midIndex);  
+        return ;  
+    }  
+}  
+		</script>-->
+	</head>
+	<body>
+	</body>
+</html>
